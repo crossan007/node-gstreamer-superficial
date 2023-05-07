@@ -1,6 +1,6 @@
 {
   "name": "gstreamer-superficial",
-  "version": "1.7.4",
+  "version": "1.8.0",
   "description": "Superficial GStreamer binding",
   "author": {
     "name": "Daniel Turing",
@@ -54,6 +54,10 @@
     {
       "name": "Luis G. Leon-Vega",
       "url": "https://github.com/lleon95"
+    },
+    {
+      "name": "Charles Crossan",
+      "url": "https://github.com/crossan007"
     }
   ],
   "dependencies": {
@@ -72,6 +76,7 @@
   "gypfile": true,
   "readmeFilename": "README.md",
   "license": "MIT",
+  "types": "gstreamer-superficial.d.ts",
   "bugs": {
     "url": "https://github.com/dturing/node-gstreamer-superficial/issues"
   }
