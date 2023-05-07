@@ -6,10 +6,15 @@ declare module "gstreamer-superficial" {
    * @param arr
    * @returns
    */
-  export const pipelineFromArray = (arr: string[]) => {
-    return arr.join(" ! ");
-  };
+  export const pipelineFromArray = (arr: string[]) => string;
 
+  declare type AppSink  = {
+    pull(callback: (buffer: any, caps: any)=>void );
+
+  }
+  declare type AppSrc = {
+
+  }
 
   declare type BussPollMessage = {
     type: string,
@@ -73,13 +78,13 @@ declare module "gstreamer-superficial" {
 
     forceKeyUnit(sink: GObject, count:number)
 
-    findChild(nodeName: string): GObject
+    findChild(nodeName: string): GObject | AppSink | AppSrc
 
     setPad(element: GObject, attribute: string, padName: string)
 
     getPad(element: GObject, padName: string);
 
-    PollBus(callback: (message: BussPollMessage)=>void)
+    pollBus(callback: (message: BussPollMessage)=>void)
 
   }
 }

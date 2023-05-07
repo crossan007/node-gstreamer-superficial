@@ -7,7 +7,7 @@
     "email": "mail@danielturing.com",
     "url": "http://danturing.com"
   },
-  "main": "./build/Release/gstreamer-superficial",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:dturing/node-gstreamer-superficial.git"
@@ -69,7 +69,11 @@
   "engines": {
     "node": ">= 5.9.1"
   },
-  "bin": {},
+  "binary": {
+    "module_name": "./build/Release/gstreamer-superficial.node",
+    "module_path": "./build/Release",
+    "module_root": "."
+  },
   "scripts": {
     "install": "node-gyp rebuild"
   },
